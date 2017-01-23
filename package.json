@@ -1,0 +1,17 @@
+{
+  "name": "blog-post-challenge",
+  "version": "1.0.0",
+  "main": "models.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "uuid": "^3.0.1"
+  }
+}
