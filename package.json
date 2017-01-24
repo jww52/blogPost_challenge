@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "models.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "mocha ./test"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +14,9 @@
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   }
 }
