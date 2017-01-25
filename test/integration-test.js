@@ -52,9 +52,9 @@ describe('Blog-posts', function() {
 
     it('should update a blog-post on PUT', function() {
       const updatedPost = {
-        title: "Cottages",
-        author: "John",
-        content: "all kinds of houses"
+        title: "Terminator",
+        author: "Aleks",
+        content: "future web developer"
       };
       return chai.request(app)
       .get('/blog-posts')
@@ -68,6 +68,7 @@ describe('Blog-posts', function() {
         res.should.have.status(200);
         res.should.be.json;
         res.body.should.be.a('object');
+        delete res.body.publishDate;
         res.body.should.deep.equal(updatedPost);
         });
       });
@@ -75,7 +76,7 @@ describe('Blog-posts', function() {
       it('should delete a blog-post on DELETE', function() {
         return chai.request(app)
         .get('/blog-posts')
-        .then(function(){
+        .then(function(res){
           return chai.request(app)
             .delete(`/blog-posts/${res.body[0].id}`);
         })

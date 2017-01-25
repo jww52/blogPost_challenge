@@ -52,9 +52,10 @@ router.put('/:id', jsonParser, (req, res) => {
     const updatedPost = BlogPosts.update({
       id: req.params.id,
       title: req.body.title,
-      author: req.body.author
+      author: req.body.author,
+      content: req.body.content
     });
-    res.status(204).json(updatedPost);
+    res.status(200).json(updatedPost);
   });
 
 router.delete('/:id', (req, res) => {
